@@ -1,0 +1,104 @@
+
+.navBar {
+    background-color: #FFFFFF;
+}
+
+.logo {
+    color: #FFFFFF;
+    width: 12%;
+    padding: 15px;
+    display: inline-block;
+}
+
+.main {
+    background-color: aliceblue;
+}
+
+.navLinks {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style-type: none;
+    height: 100%;
+    width: 85%;
+}
+
+.navBlock {
+    float: left;
+}
+
+.navBlock a {
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: "Brown-Regular", Helvetica, Arial, sans-serif;
+}
+
+.navBlock a:hover {
+    background-color: #EEE;
+}
+
+.clientTable {
+    width: 100%;
+    border : 1px solid #000;
+    border-collapse: collapse;
+}
+
+.clientTable td {
+    padding: 5px;
+    border : 1px solid #000;
+}
+
+th {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+.clientTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.clientTable tr:hover {
+    background-color: #ddd;
+}
+
+.clientSearch {
+    width: 30%;
+    height: 80%;
+    background-color: #DDDDDD;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.clientShow {
+    width: 65%;
+    height: 80%;
+    background-color: #EEE;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.clients {
+    width: 100%;
+    height: 800px;
+}
+
+
+.notSelected {
+    text-align: center;
+    padding: 300px;
+    font-size: 20px;
+    font-family: "Brown-Regular", Helvetica, Arial, sans-serif;
+    display: block;
+}
+
+.clientInfo {
+    width: 100%;
+    height: 10%;
+    display: inline-block;
+    vertical-align: top;
+}

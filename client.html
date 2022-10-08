@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Alliance Web App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<nav class="navBar">
+    <a href="#">
+        <img class="logo" src="https://www.alliance.co.nz/resources/img/alliance-logo-horizontal.png"></img>
+    </a>
+    <ul class="navLinks">
+        <li class="navBlock"><a href="index.html">Forecast</a></li>
+        <li class="navBlock"><a href="census.html">Census</a></li>
+        <li style="background-color:#DDD" class="navBlock"><a href="client.html">Client Management</a></li>
+        <li class="navBlock"><a href="contract.html">Contracts</a></li>
+    </ul>
+</nav>
+
+<body class="main">
+    <div class="mainContent">
+        <h1 class="mainTitle">Clients</h1>
+    </div>
+    <div class="clients">
+        <div class="clientSearch">
+            <input style="float:right" type="text" id="clientSearch" onkeyup="searchClient()" placeholder="Search for client name..">
+            <div id="clientList"></div>
+        </div>
+        <div class="clientShow">
+            <p class="notSelected"> Select a client to view their details </p>
+        </div>
+    </div>
+
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load our React component. -->
+    <script src="clientList.js"></script>
+
+</body>
+
+</html>
