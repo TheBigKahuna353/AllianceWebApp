@@ -1,23 +1,28 @@
-'use strict';
+// 'use strict';
 
 const e = React.createElement;
 
-class LikeButton extends React.Component {
+class ClientList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { liked: false };
+    this.state = { selected: "" };
   }
 
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
+  render_button(val) {
+    return <button className="clientInfo">{val}</button>;
     }
 
-    return <h1>Client List</h1>;
+  render() {
+    return (
+      <div>
+        {this.render_button("Client 1")}
+        {this.render_button("Client 2")}
+        {this.render_button("Client 3")}
+      </div>
+    );
   }
 }
 
-
-const domContainer = document.querySelector('#clientList');
+const domContainer = document.getElementById('clientList');
 const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
+root.render(e(ClientList));
