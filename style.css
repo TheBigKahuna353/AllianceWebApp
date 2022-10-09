@@ -68,7 +68,7 @@ th {
 
 .clientSearch {
     width: 30%;
-    height: 80%;
+    height: 800px;
     background-color: #DDDDDD;
     display: inline-block;
     vertical-align: top;
@@ -87,6 +87,13 @@ th {
     height: 800px;
 }
 
+.selected = {
+    text-align: center;
+    padding: 300px;
+    font-size: 20px;
+    font-family: "Brown-Regular", Helvetica, Arial, sans-serif;
+    display: block;
+}
 
 .notSelected {
     text-align: center;
@@ -96,11 +103,28 @@ th {
     display: block;
 }
 
+.searchInput {
+    width: 30%;
+    height: auto;
+    background-color: #FFFFFF;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
 .clientInfo {
 
-    display: inline-block;
-    vertical-align: top;
+    display: block;
     width: 50%;
     height: 100%;
     background-color: #EEE;
+    margin: 0 auto;
+}
+.clientInfoClicked {
+
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #DDD;
+    margin: 0 auto;
 }
