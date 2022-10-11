@@ -52,7 +52,7 @@ class ClientList extends React.Component {
     }
 
     queryClientList() {
-      axios.get('http://127.0.0.1:8000/api/clientList')
+      axios.get('https://623tu9.deta.dev/api/clientList')
         .then(res => this.setState({clientList : res.data.data[0]}));
       console.log("ClientList: " + this.state.clientList);
   
