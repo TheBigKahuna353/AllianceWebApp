@@ -54,8 +54,13 @@ class ClientList extends React.Component {
     queryClientList() {
       // https://623tu9.deta.dev
       axios.get('https://623tu9.deta.dev/api/clientList')
-        .then(res => this.setState({clientList : res.data}));
-      console.log("ClientList: " + this.state.clientList);
+        // .then(res => this.setState({clientList : res.data}))
+        .then(res => console.log(res.data))
+        .catch(function (error) {
+          console.log(error);
+        });
+      console.log("ClientList: " + this.state.clientList)
+  
   
     };
 
