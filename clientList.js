@@ -54,7 +54,7 @@ class ClientList extends React.Component {
     queryClientList() {
       // https://623tu9.deta.dev
       axios.get('https://623tu9.deta.dev/api/clientList')
-        .then(res => this.setState({clientList : res.data}))
+        .then(res => this.setState({clientList : res.data.data}))
         .catch(function (error) {
           console.log(error);
         });
@@ -67,7 +67,7 @@ class ClientList extends React.Component {
       axios.post('https://623tu9.deta.dev/api/clientList', {
         name: "test Client"
       })
-      .then(res => this.setState({clientList : res.data}))
+      .then(res => this.setState({clientList : res.data.data}))
       .catch(function (error) {
         console.log(error);
       });
@@ -75,7 +75,7 @@ class ClientList extends React.Component {
 
     deleteClient() {
       axios.delete('https://623tu9.deta.dev/api/clientList/test%20Client')
-      .then(res => this.setState({clientList : res.data}))
+      .then(res => this.setState({clientList : res.data.data}))
       .catch(function (error) {
         console.log(error);
       });
