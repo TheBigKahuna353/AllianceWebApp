@@ -85,6 +85,8 @@ class ClientList extends React.Component {
     return (
       <div>
         {this.state.clientList.map((client, index) => this.render_button(client, index))}
+        <button onClick={() => this.createClient()}>Create Client</button>
+        <button onClick={() => this.deleteClient()}>Delete Client</button>
       </div>
     );
   }
