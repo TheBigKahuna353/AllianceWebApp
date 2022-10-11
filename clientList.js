@@ -55,7 +55,7 @@ class ClientList extends React.Component {
       // https://623tu9.deta.dev
       axios.get('https://623tu9.deta.dev/api/clientList')
         // .then(res => this.setState({clientList : res.data}))
-        .then(res => console.log(res.data))
+        .then(res => console.log(res.data.data))
         .catch(function (error) {
           console.log(error);
         });
