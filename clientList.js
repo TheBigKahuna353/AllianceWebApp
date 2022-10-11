@@ -64,7 +64,7 @@ class ClientList extends React.Component {
     };
 
     createClient() {
-      axios.post('https://623tu9.deta.dev/api/clientList', {
+      axios.post('https://623tu9.deta.dev/api/clientList/', {
         name: "test Client"
       })
       .then(res => this.setState({clientList : res.data.data}))
