@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 todos = [
-    ["Client 2", "Client 5", "Client 6", "Client 1", "Client 3", "Client 4"],
+    "Client 2", "Client 5", "Client 6", "Client 1", "Client 3", "Client 4"
 ]
 
 @app.get("/api/clientList", tags=["todos"])
