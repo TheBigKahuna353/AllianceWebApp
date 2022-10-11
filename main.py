@@ -1,8 +1,7 @@
 from http.client import HTTPResponse
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -10,7 +9,8 @@ app = FastAPI()
 origins = [
     "http://localhost:8000",
     "http://localhost:7000",
-    "https://623tu9.deta.dev"
+    "https://623tu9.deta.dev",
+    "https://thebigkahuna353.github.io"
 ]
 
 app.add_middleware(
@@ -30,6 +30,19 @@ async def get_todos() -> dict:
     return { "data": todos }
 
 
+class User(BaseModel):
+    name: str
+
+
+@app.post("/api/clientList/")
+async def add_todo(name: User) -> dict:
+    todos.append(name.name)
+    return { "data": todos }
+
+@app.delete("/api/clientList/{name}")
+async def delete_todo(name: str) -> dict:
+    todos.remove(name)
+    return { "data": todos }
 
 @app.get("/items/{item_id}")
 async def read_item(item_id: int):

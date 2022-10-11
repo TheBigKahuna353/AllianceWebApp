@@ -59,6 +59,24 @@ class ClientList extends React.Component {
   
     };
 
+    createClient() {
+      axios.post('https://623tu9.deta.dev/api/clientList', {
+        name: "test Client"
+      })
+      .then(res => this.setState({clientList : res.data.data[0]}))
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+
+    deleteClient() {
+      axios.delete('https://623tu9.deta.dev/api/clientList/test%20Client')
+      .then(res => this.setState({clientList : res.data.data[0]}))
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+
   render() {
     return (
       <div>
