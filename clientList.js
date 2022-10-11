@@ -1,4 +1,6 @@
 // 'use strict';
+// import axios from 'axios';
+
 
 const e = React.createElement;
 
@@ -30,12 +32,16 @@ class ClientParent extends React.Component {
 class ClientList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: "" };
+    this.state = { selected: "" , clientList: []};
+    this.queryClientList();
   }
 
-  render_button(client) {
+  render_button(client, index) {
     if (client == this.props.selected) {
-      return <button value={client} className="clientInfoClicked" onClick={() => this.props.handleClick(client)}>
+      return <button  value={client} 
+                      className="clientInfoClicked" 
+                      onClick={() => this.props.handleClick(client)}
+                      key={index}>
       {client}
       </button>;
     } else {  
@@ -45,13 +51,17 @@ class ClientList extends React.Component {
       }
     }
 
+    queryClientList() {
+      axios.get('http://127.0.0.1:8000/api/clientList')
+        .then(res => this.setState({clientList : res.data.data[0]}));
+      console.log("ClientList: " + this.state.clientList);
+  
+    };
 
   render() {
     return (
       <div>
-        {this.render_button("Client 1")}
-        {this.render_button("Client 2")}
-        {this.render_button("Client 3")}
+        {this.state.clientList.map((client, index) => this.render_button(client, index))}
       </div>
     );
   }
@@ -62,6 +72,7 @@ class ClientInfo extends React.Component {
     super(props);
   }
 
+  
   render() {
     if (this.props.selected == "") {
       return (

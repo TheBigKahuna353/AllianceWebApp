@@ -76,7 +76,7 @@ th {
 
 .clientShow {
     width: 65%;
-    height: 80%;
+    height: 800px;
     background-color: #EEE;
     display: inline-block;
     vertical-align: top;
@@ -88,8 +88,8 @@ th {
 }
 
 .selected {
-    text-align: center;
-    padding: 300px;
+    text-align: left;
+    padding: 10px;
     font-size: 20px;
     font-family: "Brown-Regular", Helvetica, Arial, sans-serif;
     display: block;

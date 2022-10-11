@@ -1,10 +1,10 @@
 import http.server
 import socketserver
 
-PORT = 8000
+PORT = 7000
 
 Handler = http.server.SimpleHTTPRequestHandler
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port", PORT)
+    print("serving at /http://localhost:%d/" %(PORT))
     httpd.serve_forever()
